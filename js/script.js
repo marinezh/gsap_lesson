@@ -216,23 +216,6 @@ function animation() {
     },
   });
 
-  // gsap.set(".rates__card", {
-  //   opacity: 0,
-  // });
-  // gsap.to(".rates__card", {
-  //   opacity: 1,
-  //   stagger: 0.4, // card appears one by one
-  //   scrollTrigger: {
-  //     trigger: ".rates",
-  //     start: "top top",
-  //     //   end: "bottom top",
-  //     end: "+=200",
-  //     pin: true, // fix block until smth happend
-  //     //   scrub: true,
-  //     markers: true,
-  //   },
-  // });
-
   // Mobile
   // code snippet copied from green sock documentation Simplistic desktop/mobile example
   let mediaAnimation = gsap.matchMedia();
