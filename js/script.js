@@ -124,23 +124,22 @@ function animation() {
   //   });
 
   ////////
-  //   gsap.set(".rates__card", {
-  //     opacity: 0,
-  //   });
-  //   gsap.to(".rates__card", {
-  //     opacity: 1,
-  //     stagger: 0.1, // card appears one by one
-  //     scrollTrigger: {
-  //       trigger: ".rates",
-  //       start: "top top",
-  //       //   end: "bottom top",
-  //       end: "+=200",
-  //       pin: true, // fix block until smth happend
-  //       //   scrub: true,
-  //       markers: true,
-  //     },
-  //   });
-  const tlPromo = gsap.timeline({});
+  // gsap.set(".rates__card", {
+  //   opacity: 0,
+  // });
+  // gsap.to(".rates__card", {
+  //   opacity: 1,
+  //   stagger: 0.4, // card appears one by one
+  //   scrollTrigger: {
+  //     trigger: ".rates",
+  //     start: "top top",
+  //     //   end: "bottom top",
+  //     end: "+=200",
+  //     pin: true, // fix block until smth happend
+  //     //   scrub: true,
+  //     markers: true,
+  //   },
+  // });
 
   //   tlPromo
   //     .from(".promo__title span:first-child", {
@@ -158,6 +157,7 @@ function animation() {
   //       "<"
   //     );
   // another way to animate this element (better way) but first we need to add property in css style in spans like this :  transform: translateX(200%);
+  const tlPromo = gsap.timeline({});
   tlPromo
     .to(".promo__title span:first-child", {
       duration: 1.5,
@@ -182,7 +182,7 @@ function animation() {
       // scrub: true,
       scrub: 2,
       pin: true,
-      //   markers: true,
+      // markers: true,
     },
   });
   tlImages
@@ -200,8 +200,38 @@ function animation() {
       "<"
     );
 
-  const tlLines = gsap.timeline({});
-  tlLines.to(".choose__wrap");
+  //const tlLines = gsap.timeline({});
+  // tlLines.to(".choose__wrap");
+
+  // animation of rates cards
+
+  gsap.from(".rates-card", {
+    stagger: 0.3,
+    opacity: 0,
+    y: 100,
+    scrollTrigger: {
+      trigger: ".rates",
+      start: "top 10%",
+      toggleActions: "play none none reverse",
+    },
+  });
+
+  // gsap.set(".rates__card", {
+  //   opacity: 0,
+  // });
+  // gsap.to(".rates__card", {
+  //   opacity: 1,
+  //   stagger: 0.4, // card appears one by one
+  //   scrollTrigger: {
+  //     trigger: ".rates",
+  //     start: "top top",
+  //     //   end: "bottom top",
+  //     end: "+=200",
+  //     pin: true, // fix block until smth happend
+  //     //   scrub: true,
+  //     markers: true,
+  //   },
+  // });
 
   // Mobile
   // code snippet copied from green sock documentation Simplistic desktop/mobile example
