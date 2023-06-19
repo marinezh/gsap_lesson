@@ -216,6 +216,8 @@ function animation() {
     },
   });
 
+  // test
+
   // Mobile
   // code snippet copied from green sock documentation Simplistic desktop/mobile example
   let mediaAnimation = gsap.matchMedia();
